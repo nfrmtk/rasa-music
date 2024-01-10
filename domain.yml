@@ -9,10 +9,17 @@ intents:
   - mood_unhappy
   - bot_challenge
   - best_songs
+  - similar_bands
+  - best_album
+  - country_best_band
+  - country_best_songs
+  - bands_tags
+  - tag_best_albums
 
 entities:
   - band
-
+  - country
+  - tag
 slots:
   band:
     type: text
@@ -20,7 +27,18 @@ slots:
     mappings:
       - type: from_entity
         entity: band
-
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: country
+  tag:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: tag
 
 responses:
   utter_greet:
@@ -48,3 +66,9 @@ session_config:
 
 actions:
   - action_best_songs
+  - action_similar_bands
+  - action_best_album
+  - action_country_best_band
+  - action_country_best_songs
+  - action_bands_tags
+  - action_tag_best_albums

@@ -28,7 +28,7 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-- story: listen to music
+- story: check artist's top tracks
   steps:
     - intent: greet
     - action: utter_greet
@@ -36,4 +36,57 @@ stories:
     - slot_was_set:
         - band: Rammstein
     - action: action_best_songs
-    
+- story: find similar music
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: similar_bands
+    - slot_was_set:
+        - band: Arctic Monkeys
+    - action: action_similar_bands
+
+- story: check artist's top album
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: best_album
+    - slot_was_set:
+        - band: Arctic Monkeys
+    - action: action_best_album
+
+- story: check countries most popular band
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: country_best_band
+    - slot_was_set:
+        - country: Russia
+    - action: action_country_best_band
+
+- story: check countries most popular songs
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: country_best_songs
+    - slot_was_set:
+        - country: Russia
+    - action: action_country_best_songs
+
+- story: print band's tags
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: bands_tags
+    - slot_was_set:
+        - band: Linkin Park
+    - action: action_bands_tags
+
+- story: print tags most popular albums
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tag_best_albums
+    - slot_was_set:
+        - band: rock
+    - action: action_tag_best_albums
+

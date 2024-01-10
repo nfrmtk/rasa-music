@@ -89,8 +89,47 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: best_songs
   examples: |
     - best [Rammstein](band) songs
     - I want to listen to [Depeche Mode](band)
     - turn on [Billie Eilish](band)
+
+- intent: best_album
+  examples: |
+    - best [Rammstein](band) album
+    - tell me which is the best [Depeche Mode](band) album
+    - i need good [Billie Eilish](band) album
+
+- intent: similar_bands
+  examples: |
+    - I want to listen to music like [Rammstein](band)
+    - What bands make music similar to [Linkin Park](band)?
+    - Tell me bands similar to [Green Day](band)
+
+- intent: country_best_band
+  examples: |
+    - Which band is best in [Russia](country)?
+    - Which band is the most popular in [Spain](country)?
+    - Tell the most popular bands in [USA](country).
+    - I want to know what is the most popular band in [Germany](country).
+
+- intent: country_best_songs
+  examples: |
+    - Which are the best songs in [Japan](country)?
+    - Tell me most popular songs in [Brazil](country).
+    - I want to know what are the most popular songs in [Peru](country).
+    - I want to listen to what the listen to in [China](country).
+
+- intent: bands_tags
+  examples: |
+    - Tell me the tags of [Linkin Park](band)?
+    - What are [Rammstein](band) tags?
+
+- intent: tag_best_albums
+  examples: |
+    - Tell me best albums by tag [rock](tag).
+    - What are best albums with tag [rock](tag)?
+    - Best albums tagged [rock](tag).
+
